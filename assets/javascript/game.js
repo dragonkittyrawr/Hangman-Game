@@ -1,35 +1,64 @@
+// Create wordBank array.
 
-    //Word bank.
+var wordBank = ["Lorem", "Ipsum", "Ergo", "Pickle", "Stoned", "Turkey", "Water"];
 
-    var words = ["Lorem", "Ipsum", "Ergo", "Pickle", "Stoned", "Turkey", "Water"];
+// Randomly select word from wordBank.
 
-    //Pick a random word from word bank.
+var number = Math.floor((Math.random() * wordBank.length));
 
-    var number = Math.floor((Math.random() * words.length));
+// onDeck is the selected word.
 
-    //onDeck is the selected word.
+var onDeck = (wordBank[number]).toLowerCase();
 
-    var onDeck = (words[number]).toLowerCase();
-    var onDeckLetters = [];
+// Create an empty onDeckLetters array.
 
-    //Get component letters for selected word.
+var onDeckLetters = [];
 
-    for (var i = 0; i < onDeck.length; i++) {
-        onDeckLetters.push(onDeck.charAt(i));
-        console.log(onDeckLetters);
-    }
+//Get component letters for selected word.
+
+for (var i = 0; i < onDeck.length; i++) {
+    // Push to onDeckLetters.
+    onDeckLetters.push(onDeck.charAt(i));
+    // FOR TESTING ONLY
+    console.log(onDeckLetters);
+};
+
+//  GAME START
+
+document.onkeyup = function(event) {
+
+    // Captures the key press.
+    var userGuess = event.keyCode;
+
+    if (userGuess === "") {
+        var guesses = parseInt((onDeckLetters.length) + 5);
+        var startScreen = "<p>Game Loaded.  You have " + guesses + " guesses left.</p>" + "<p></p>" + "<p>Pick a letter.</p>";
+        document.querySelector("#game").innerHTML = startScreen;
+    
 
 
 
-    // Capture user input.
 
-    var lettersGuessed = [];
+    // Capture userGuess as lower case.
 
-
-    document.onkeyup = function(event) {
-
-        // Captures the key press, converts it to lowercase, and saves it to a variable.
+  document.onkeyup = function(event) {
         var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+        // Create an empty lettersGuessed array.
+
+        var lettersGuessed = [];
+
+
+        // Look for userGuess in onDeckLetters.
+        if (onDeckLetters.indexOf(userGuess) === -1) {
+            guesses--;
+        } else {
+            alert("That is in this word!");
+        }
+
+
+
+
 
         // Checks userGuess against previously guessed letters.
 
@@ -38,24 +67,14 @@
             // If the letter has not been guessed, push to array.
             lettersGuessed.push(userGuess);
         } else {
-            // Looks for userGuess in onDeckLetters.
-            if (onDeckLetters.indexOf(userGuess) === -1) {
-                alert("You already guessed " + userGuess + "!");
-            } else {
-                alert("That is in this word!");
-            }
+            // Update text.
+
+            var html = "You have " + guesses + " guesses left.</p>" + "<p></p>" + "<p>Pick a letter.</p>" + "<p>Letters Guessed: " + lettersGuessed + " </p>";
+            document.querySelector("#game").innerHTML = html;
+
         }
-
-        // Update text.
-
-        var html = "<p>Letters Guessed: " + lettersGuessed + " </p>";
-
-        document.querySelector("#game").innerHTML = html;
 
     }
 
-    //Compare user input to letters.
-
-    // function(playGame) {
-
-    // }
+    }else {}
+}
