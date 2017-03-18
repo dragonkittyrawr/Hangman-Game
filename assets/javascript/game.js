@@ -78,7 +78,8 @@ function letterbee() {
 
     var polo = Object.assign({}, onDeckLetters);
 
-    return(theBlanks);
+    return (theBlanks, guesses, onDeckLetters, onDeck, letters, blanks);
+
 
 };
 
@@ -89,8 +90,15 @@ function letterbee() {
 //  GAMESTART
 
 
-
 function gameStart() {
+
+
+
+
+
+    document.querySelector("#startBtn").style.visibility = "hidden";
+
+
 
     var theBlanks = letterbee();
 
@@ -109,79 +117,70 @@ function gameStart() {
 
 function gamePlay() {
 
-
+    var guesses = letterbee();
 
     // Capture userGuess as lower case.
-    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    var userGuess = String.fromCharCode(gamePlay.keyCode).toLowerCase();
 
     // FOR TESTING ONLY
     console.log(userGuess);
 
     // Create an empty lettersGuessed array.
 
-
+    console.log(guesses);
 
     // Guesses left check.
 
     if (guesses > 0) {
 
-        // Look for userGuess in onDeckLetters.
-        if (onDeckLetters.indexOf(userGuess) === -1) {
-            guesses--;
-        }
 
-        // Look for userGuess in lettersGuessed.
-        if (lettersGuessed.indexOf(userGuess) === -1) {
+        for (var w = 0; w < onDeckLetters.blanks.length; w++) {
 
-            // If the letter has not been guessed, push to array.
+            // Look for userGuess in onDeckLetters.
+            if (onDeckLetters.indexOf(userGuess) === -1) {
+                guesses--;
+            }
 
-            lettersGuessed.push(userGuess);
-        }
-        // Update text.
+            // Look for userGuess in lettersGuessed.
+            if (lettersGuessed.indexOf(userGuess) === -1) {
 
-    } else {
-        alert("Game Over!");
-    };
+                // If the letter has not been guessed, push to array.
+
+                lettersGuessed.push(userGuess);
+            }
+            // Update text.
+
+        };
+
+    // } else {
+    //     alert("Game Over!");
+
+    // };
 
 };
 
 
-
+// #nobkgrd
 
 // MAIN PROCESS
 // ==============================================================================
 
 // PREGAME
 
-document.onkeyup = function(event) {
+// GAMESTART
 
-    // Captures the key press.
-    var go = event.keyCode;
-
-    // FOR TESTING ONLY
-    console.log(go);
-
-    // GAMESTART
-
-    
-    
-
-    // If the user presses the space key the game loads.
-    if (go === 0 || go === 32) {
-
-        // letterbee();
-
-        gameStart();
+document.querySelector("#startBtn").addEventListener("click", gameStart()); {
 
 
-        // GAMEPLAY
+    // GAMEPLAY
 
-        if (guesses !== "preGame") {
-            return;
-        }
+    if (guesses !== "preGame") {
 
         gamePlay();
+
     };
+};
+
 };
 
 

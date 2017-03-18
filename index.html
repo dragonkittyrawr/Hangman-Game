@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Hangman</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- <link rel="stylesheet" type="text/css" href="http://www.animal-crossing.com/assets/css/main.css"> -->
 </head>
@@ -18,12 +19,15 @@
             </header>
             <div id="featured">
                 <div class="featured-top-border"></div>
-                <div id="featured-content">
-                    <header class="featured-titles">
-                        <h1><div id="game">Press spacebar to start game.</div></h1>
-                        <h1><div id="guessedLetters"></div></h1>
-                        <h1><div id="wordSpace"</h1>
-                    </header>
+                <div class="featured-content">
+                    <div id="game">
+                        <header class="featured-titles">
+                            <h1 id="startBtn" onclick="gameStart()">Click Here to Start</h1>
+                        </header>
+                    </div>
+                    <h1 id="nobkgrd"><div id="game"></div></h1>
+                    <h1 id="nobkgrd"><div id="guessedLetters"></div></h1>
+                    <h1 id="nobkgrd"><div id="wordSpace"></div></h1>
                 </div>
             </div>
         </div>
