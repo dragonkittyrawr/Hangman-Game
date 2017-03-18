@@ -1,3 +1,6 @@
-.spaceStyle {
-	font-size: 90%;
+#wrapper #featured #featured-content header.featured-titles {
+  background-size: contain;
+  margin: 0 auto;
+  height: auto!important;
+  text-align: center;
 }
