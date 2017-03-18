@@ -1176,7 +1176,7 @@ body {
 }
 
 #clouds {
-  background: transparent 0 0 url('../img/header-clouds-tile.jpg?1439253101') repeat-x;
+  background: transparent 0 0 url('../images/header-clouds-tile.jpg?1439253101') repeat-x;
   background-size: 33.333333%;
   position: absolute;
   top: 0;
@@ -1190,7 +1190,7 @@ body {
 }
 
 #noclouds {
-  background: transparent top center url('../img/header-no-clouds.png?1439424269') no-repeat;
+  background: transparent top center url('../images/header-no-clouds.png?1439424269') no-repeat;
   background-size: 162%;
   position: relative;
   width: 100%;
@@ -1211,16 +1211,16 @@ body {
   margin-top: -23%;
 }
 #wrapper #featured .featured-top-border {
-  background: transparent top center url('../img/light-curve.png?1438880351') no-repeat;
+  background: transparent top center url('../images/light-curve.png?1438880351') no-repeat;
   background-size: cover;
   height: 44px;
 }
 #wrapper #featured .featured-content {
   min-height: 496px;
-  background: transparent url('../img/light-texture.jpg?1438880351');
+  background: transparent url('../images/light-texture.jpg?1438880351');
 }
 #wrapper #featured .featured-content header.featured-titles {
-  background: transparent url('../img/wood-bg.png?1438880351') no-repeat;
+  background: transparent url('../images/wood-bg.png?1438880351') no-repeat;
   background-size: contain;
   margin: 0 auto;
   width: 250px;
@@ -1279,39 +1279,39 @@ body {
   padding-bottom: 4em;
 }
 #wrapper #featured .featured-content .featured-title .scale.hhd .image .title {
-  background-image: url('../img/hhd-logo.png?1439327292');
+  background-image: url('../images/hhd-logo.png?1439327292');
 }
 #wrapper #featured .featured-content .featured-title .scale.hhd .image .character {
-  background-image: url('../img/hhd-character.png?1439327292');
+  background-image: url('../images/hhd-character.png?1439327292');
 }
 #wrapper #featured .featured-content .featured-title .scale.hhd .image .mask .featured-image {
-  background-image: url('../img/hhd-feature-image@560px.jpg?1439327292');
+  background-image: url('../images/hhd-feature-image@560px.jpg?1439327292');
 }
 #wrapper #featured .featured-content .featured-title .scale.newleaf .image .title {
-  background-image: url('../img/nl-logo.png?1439327292');
+  background-image: url('../images/nl-logo.png?1439327292');
   width: 190px;
   left: 27%;
 }
 #wrapper #featured .featured-content .featured-title .scale.newleaf .image .character {
-  background-image: url('../img/nl-character.png?1439327292');
+  background-image: url('../images/nl-character.png?1439327292');
 }
 #wrapper #featured .featured-content .featured-title .scale.newleaf .image .mask .featured-image {
-  background-image: url('../img/nl-feature-image@560px.jpg?1439327292');
+  background-image: url('../images/nl-feature-image@560px.jpg?1439327292');
 }
 #wrapper #featured .featured-content .featured-title .scale.amiibo .image .title {
-  background-image: url('../img/af-logo.png?1439327292');
+  background-image: url('../images/af-logo.png?1439327292');
   width: 182px;
   left: 29%;
   top: 15px;
 }
 #wrapper #featured .featured-content .featured-title .scale.amiibo .image .character {
-  background-image: url('../img/af-character.png?1439327292');
+  background-image: url('../images/af-character.png?1439327292');
   width: 294px;
   left: -45px;
   bottom: 9px;
 }
 #wrapper #featured .featured-content .featured-title .scale.amiibo .image .mask .featured-image {
-  background-image: url('../img/af-feature-image@560px.jpg?1440018407');
+  background-image: url('../images/af-feature-image@560px.jpg?1440018407');
 }
 #wrapper #featured .featured-content .featured-title .scale .image {
   width: 440px;
@@ -1336,7 +1336,7 @@ body {
   transform: scale(1.16);
 }
 #wrapper #featured .featured-content .featured-title .scale .image a.bevel {
-  background: transparent url('../img/bevel.png?1439327292') no-repeat;
+  background: transparent url('../images/bevel.png?1439327292') no-repeat;
   height: 440px;
   width: 440px;
   background-size: cover;
@@ -1499,13 +1499,13 @@ body {
   font-size: 180%;
 }
 #wrapper #featured .featured-content .featured-title .details p.learn-more.blue-button {
-  background-image: url('../img/blue-button.png?1439233540');
+  background-image: url('../images/blue-button.png?1439233540');
 }
 #wrapper #featured .featured-content .featured-title .details p.learn-more.green-button {
-  background-image: url('../img/green-button.png?1439233540');
+  background-image: url('../images/green-button.png?1439233540');
 }
 #wrapper #featured .featured-content .featured-title .details p.learn-more.red-button {
-  background-image: url('../img/red-button.png?1439233540');
+  background-image: url('../images/red-button.png?1439233540');
 }
 
 #amiibo {
@@ -1513,7 +1513,7 @@ body {
 }
 #amiibo .amiibo-top-border {
   position: relative;
-  background: transparent top center url('../img/blue-curve.svg?1439836085') no-repeat;
+  background: transparent top center url('../images/blue-curve.svg?1439836085') no-repeat;
   background-size: cover;
   height: 50px;
 }
@@ -1620,7 +1620,7 @@ body {
   margin: 0 auto;
   display: block;
   width: 360px;
-  background: transparent url('../img/purple-button-pattern.jpg?1439836085');
+  background: transparent url('../images/purple-button-pattern.jpg?1439836085');
   height: 57px;
   text-align: center;
   font-family: "Arvo", "Times New Roman", serif;
@@ -1649,7 +1649,7 @@ body {
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.28);
 }
 #amiibo .amiibo-bottom-border {
-  background: transparent top center url('../img/blue-curve.svg?1439836085') no-repeat;
+  background: transparent top center url('../images/blue-curve.svg?1439836085') no-repeat;
   background-size: cover;
   -moz-transform: scaleY(-1);
   -ms-transform: scaleY(-1);
@@ -1660,12 +1660,12 @@ body {
 
 #timeline {
   margin-top: -40px;
-  background: transparent url('../img/green-texture.jpg?1438880351');
+  background: transparent url('../images/green-texture.jpg?1438880351');
   padding-bottom: 20px;
   overflow: hidden;
 }
 #timeline .timeline-wrapper {
-  background: transparent 0 68.3% url('../img/dotted-line.png?1438895512') no-repeat;
+  background: transparent 0 68.3% url('../images/dotted-line.png?1438895512') no-repeat;
 }
 #timeline .content {
   padding: 2em 0;
@@ -1699,7 +1699,7 @@ body {
 }
 #timeline .timeline-control-wrapper .timeline-control.back {
   left: 0;
-  background-image: url('../img/arrow.png?1438895512');
+  background-image: url('../images/arrow.png?1438895512');
   -moz-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -1714,7 +1714,7 @@ body {
   filter: drop-shadow(0 2px rgba(0, 0, 0, 0.28));
 }
 #timeline .timeline-control-wrapper .timeline-control.back.disabled {
-  background-image: url('../img/arrow-disabled.png?1438895512');
+  background-image: url('../images/arrow-disabled.png?1438895512');
   -moz-transform: scaleX(1);
   -ms-transform: scaleX(1);
   -webkit-transform: scaleX(1);
@@ -1722,7 +1722,7 @@ body {
 }
 #timeline .timeline-control-wrapper .timeline-control.forwards {
   right: 0;
-  background-image: url('../img/arrow.png?1438895512');
+  background-image: url('../images/arrow.png?1438895512');
 }
 #timeline .timeline-control-wrapper .timeline-control.forwards:hover {
   -moz-transform: translateY(2px) scaleX(1);
@@ -1733,7 +1733,7 @@ body {
   filter: drop-shadow(0 2px rgba(0, 0, 0, 0.28));
 }
 #timeline .timeline-control-wrapper .timeline-control.forwards.disabled {
-  background-image: url('../img/arrow-disabled.png?1438895512');
+  background-image: url('../images/arrow-disabled.png?1438895512');
   -moz-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -1843,7 +1843,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(255, 248, 220, 0.7) url('../img/dots.png?1439858001');
+  background: rgba(255, 248, 220, 0.7) url('../images/dots.png?1439858001');
 }
 #timeline #timeline-modal-details .modal-trigger {
   display: none;
@@ -1863,7 +1863,7 @@ body {
   border: 5px solid white;
   box-shadow: 1px 4px 0 0 rgba(0, 0, 0, 0.25);
   border-radius: 2em;
-  background: #00957b url('../img/dots.png?1439858001');
+  background: #00957b url('../images/dots.png?1439858001');
   padding: 33px 35px;
   padding-left: 15px;
 }
@@ -1875,7 +1875,7 @@ body {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  background: #ff5d3a url('../img/btn-close@2x.png?1439858001') center center no-repeat;
+  background: #ff5d3a url('../images/btn-close@2x.png?1439858001') center center no-repeat;
   background-size: contain;
   position: absolute;
   right: -10px;
@@ -1910,7 +1910,7 @@ body {
   margin: 10px auto;
   display: block;
   max-width: 270px;
-  background: #11bdab url('../img/dots.png?1439858001');
+  background: #11bdab url('../images/dots.png?1439858001');
   height: 57px;
   text-align: center;
   font-family: "Arvo", "Times New Roman", serif;
@@ -2158,7 +2158,7 @@ body {
     font-size: 400%;
     top: 0.5em;
     text-indent: -999em;
-    background: transparent top center url('../img/logo-amiibo@2x.png?1438880351') no-repeat;
+    background: transparent top center url('../images/logo-amiibo@2x.png?1438880351') no-repeat;
     background-size: contain;
     position: absolute;
     left: 25%;
@@ -2270,7 +2270,7 @@ body {
   }
 
 #wrapper #featured .featured-content .divider {
-  background: transparent center center url('../img/divider.png?1438988477') no-repeat;
+  background: transparent center center url('../images/divider.png?1438988477') no-repeat;
   background-size: 80%;
   width: 100%;
   height: 40px;
@@ -2642,7 +2642,7 @@ body {
   }
 }
 #footer-main {
-  background: transparent url('../img/footer-bg.jpg?1438880351');
+  background: transparent url('../images/footer-bg.jpg?1438880351');
   border-top: 6px solid rgba(0, 0, 0, 0.35);
   position: relative;
   margin-top: -10px;
@@ -2909,6 +2909,6 @@ body.lang-fr #timeline ul li article dl dd.released {
 header.featured-titles {
   background-size: contain;
   margin: 0 auto;
-  height: auto!important;
+  height: 15%!important;
   text-align: center;
 }
