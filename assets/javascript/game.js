@@ -78,27 +78,39 @@ function letterbee() {
 
     var polo = Object.assign({}, onDeckLetters);
 
+    return(theBlanks);
+
+};
+
+
+
+
+
+//  GAMESTART
+
+
+
+function gameStart() {
+
+    var theBlanks = letterbee();
+
     // Create html to display blanks.
 
     var htmlBlanks = "<p>" + theBlanks + "</p>";
 
     // Display blanks on page.
 
-
-
-//  GAMESTART
-
-function gameStart() {
-
     var startScreen = "<p>Game Loaded.  You have " + guesses + " guesses left.</p>" + "<p></p>" + "<p>Pick a letter.</p>";
     document.querySelector("#game").innerHTML = startScreen;
     document.querySelector("#wordSpace").innerHTML = htmlBlanks;
-
 };
 
 // GAMEPLAY
 
 function gamePlay() {
+
+
+
     // Capture userGuess as lower case.
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
@@ -130,9 +142,10 @@ function gamePlay() {
     } else {
         alert("Game Over!");
     };
-};
 
 };
+
+
 
 
 // MAIN PROCESS
@@ -140,7 +153,7 @@ function gamePlay() {
 
 // PREGAME
 
-document.onkeyup = function hangman(event) {
+document.onkeyup = function(event) {
 
     // Captures the key press.
     var go = event.keyCode;
@@ -150,11 +163,15 @@ document.onkeyup = function hangman(event) {
 
     // GAMESTART
 
+    
+    
+
     // If the user presses the space key the game loads.
     if (go === 0 || go === 32) {
 
-        letterbee();
-        // gameStart();
+        // letterbee();
+
+        gameStart();
 
 
         // GAMEPLAY
@@ -163,10 +180,8 @@ document.onkeyup = function hangman(event) {
             return;
         }
 
-        letterbee();
-        // gamePlay();
+        gamePlay();
     };
-
 };
 
 
