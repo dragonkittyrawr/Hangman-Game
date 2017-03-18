@@ -1,221 +1,177 @@
-window.onload = function hangman() {
+// VARIABLES
+// ==============================================================================
 
-    var guesses = "preGame";
+var lettersGuessed = [];
 
-    if (guesses = 0) {
-        alert("Game Over!");
-    }
+var startScreen = "<p>Game Loaded.  You have " + guesses + " guesses left.</p>" + "<p></p>" + "<p>Pick a letter.</p>";
 
-    //  GAME START
 
-    document.onkeyup = function(gameStart) {
 
-        // Create wordBank array.
+// Create wordBank array.
 
-        var wordBank = ["Lorem", "Ipsum", "Ergo", "Pickle", "Stoned", "Turkey", "Water"];
+var wordBank = ["Lorem", "Ipsum", "Ergo", "Pickle", "Stoned", "Turkey", "Water"];
 
-        // Randomly select word from wordBank.
+// Randomly select word from wordBank.
 
-        var number = Math.floor((Math.random() * wordBank.length));
+var number = Math.floor((Math.random() * wordBank.length));
 
-        // onDeck is the selected word.
+// onDeck is the selected word.
 
-        var onDeck = (wordBank[number]).toLowerCase();
+var onDeck = (wordBank[number]).toLowerCase();
 
-        // Number of guesses is based on length of word.
+// Number of guesses is based on length of word.
 
-        var guesses = parseInt((onDeck.length) + 5);
+var guesses = parseInt((onDeck.length) + 3);
 
-        // Captures the key press.
-        var go = gameStart.keyCode;
+// Create blank onDeckLetters object.
+var onDeckLetters = new Object();
+
+// Create blank letters array.
+
+var letters = new Array();
+
+// Create blank blanks array.
+
+var blanks = new Array();
+
+
+
+// var guesses = "preGame";
+var guesses = "preGame";
+
+
+// FUNCTIONS
+// ==============================================================================
+
+// PRE-GAME
+
+
+
+
+//  GAMESTART
+
+function gameStart() {
+
+
+    document.querySelector("#game").innerHTML = startScreen;
+
+
+    // Loop based on selected word's length.
+
+    for (var i = 0; i < onDeck.length; i++) {
+
+        // Push the component letters of onDeck to letters array.
+
+        letters.push(onDeck.charAt(i));
+
+        // Push a _ for each component letter.
+
+        blanks.push("_");
+
+        // Use join to remove the default commas from blanks array.
+
+        var theBlanks = blanks.join(" ");
+
         // FOR TESTING ONLY
-        console.log(go);
 
-        // If the user presses space the game loads.
+        console.log(letters);
+        console.log(blanks);
 
-        if (go === 0 || go === 32) {
+    };
 
-            var startScreen = "<p>Game Loaded.  You have " + guesses + " guesses left.</p>" + "<p></p>" + "<p>Pick a letter.</p>";
-            document.querySelector("#game").innerHTML = startScreen;
+    // Define content of onDeckLetters object {l: b,}.
 
+    onDeckLetters.l = letters;
+    onDeckLetters.b = blanks;
+
+    // Assign this.
+
+
+    var polo = Object.assign({}, onDeckLetters);
+
+    // Create html to display blanks.
+
+    var htmlBlanks = "<p>" + theBlanks + "</p>";
+
+    // Display blanks on page.
+
+    document.querySelector("#wordSpace").innerHTML = htmlBlanks;
+
+
+
+};
+
+// GAMEPLAY
+
+function gamePlay(event) {
+    // Capture userGuess as lower case.
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+    // FOR TESTING ONLY
+    console.log(userGuess);
+
+    // Create an empty lettersGuessed array.
+
+
+
+    // Guesses left check.
+
+    if (guesses > 0) {
+
+        // Look for userGuess in onDeckLetters.
+        if (onDeckLetters.indexOf(userGuess) === -1) {
+            guesses--;
         }
 
+        // Look for userGuess in lettersGuessed.
+        if (lettersGuessed.indexOf(userGuess) === -1) {
+
+            // If the letter has not been guessed, push to array.
+
+            lettersGuessed.push(userGuess);
+        }
+        // Update text.
+
+    } else {
+        alert("Game Over!");
+    };
+};
 
 
-        // Create an onDeckLetters object.
-        var onDeckLetters = new Object();
-        var letters = new Array();
-        var blanks = new Array();
+// MAIN PROCESS
+// ==============================================================================
 
-        // var dashDiv = document.getElementById("wordSpace");
-        // var newDashDiv = document.createElement("div");
+// PREGAME
 
-        for (var i = 0; i < onDeck.length; i++) {
+if (guesses === 0) {
+    alert("Game Over!");
+};
 
-            
+document.onkeyup = function(event) {
 
-            letters.push(onDeck.charAt(i));
-            blanks.push("_ ");
+    // Captures the key press.
+    var go = event.keyCode;
 
-            console.log(letters);
-            console.log(blanks);
-
-            };
-
-            onDeckLetters.l = letters;
-            onDeckLetters.b = blanks;
-
-
-
-            var polo = Object.assign({}, onDeckLetters);
-
-
-
-            var htmlBlanks = "<p>" + onDeckLetters.b + "</p>";
-
-            document.querySelector("#wordSpace").innerHTML = htmlBlanks;
+    // FOR TESTING ONLY
+    console.log(go);
 
 
 
-            // // This placeholder will get overwritten with each iteration of the loop.
-            
+// GAMESTART
 
-            // // We then assign the the value of this placeholder div to be the text in the array.
-            //  var newDashDiv.innerHTML = onDeck;
+// If the user presses the space key the game loads.
+if (go === 0 || go === 32) {
 
-            // // We then add the placeholder div to the our main div on the page ("#drink-options")
-            // dashDiv.appendChild(newDashDiv);
+    gameStart();
 
-            // console.log(onDeckLetters.blanks[i]);
+};
 
-            // console.log(htmlBlanks);
-        
+// GAMEPLAY
 
-    
+if (guesses !== "preGame") {
+
+    gamePlay();
 
 };
 
 };
-
-// var onDeckLetters = { l: b, };
-// var l = onDeck.charAt(i);
-// var b = "_ ";
-// var marco = l + ": " + b + ",";
-// var polo = Object.assign({ marco }, onDeckLetters);
-
-
-// This line of JavaScript "grabs" the main div on the page ("#drink-options");
-
-
-// We then use a for loop to iterate through all the drinks in drinkList.
-// With each iteration, we perform a series of code operations each time.
-
-
-// For each drink in the array, we create a new placeholder div.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Object.assign(onDeckLetters, polo);
-
-
-
-
-
-
-
-//Get component letters for selected word.
-
-// var onDeckBlanks = onDeck.split("");
-// // FOR TESTING ONLY
-// console.log(onDeckBlanks);
-
-
-// Display blanks for selected word.
-
-// for (var i = 0; i < onDeckBlanks.length; i++) {
-//     // FOR TESTING ONLY
-//     console.log(onDeckBlanks);
-
-// var htmlBlanks = ("<p>" + onDeckLetters.b[i] + "</p>");
-// FOR TESTING ONLY
-
-// document.getElementById("#wordSpace").innerHTML = htmlBlanks;
-
-
-
-
-
-
-
-
-// // Display blanks for selected word.
-
-// for (var i = 0; i < onDeck.length; i++) {
-//     // FOR TESTING ONLY
-//     console.log(onDeckBlanks);
-
-//     var htmlBlanks = ("<p>" + onDeckLetters[i] + "</p>");
-//     // FOR TESTING ONLY
-//     console.log(htmlBlanks);
-
-//     document.getElementById("#wordSpace").innerHTML = htmlBlanks;
-
-// }
-
-
-
-
-
-
-
-
-// Capture userGuess as lower case.
-
-// document.onkeyup = function(gamePlay) {
-//     userGuess = String.fromCharCode(gamePlay.keyCode).toLowerCase();
-
-//     console.log(userGuess);
-
-//     // Create an empty lettersGuessed array.
-
-//     var lettersGuessed = [];
-
-//     // Guesses left check.
-
-//     if (guesses > 0) {
-
-//         // Look for userGuess in onDeckLetters.
-//         if (onDeckLetters.indexOf(userGuess) === -1) {
-//             guesses--;
-//         }
-
-//         // Look for userGuess in lettersGuessed.
-//         if (lettersGuessed.indexOf(userGuess) === -1) {
-
-//             // If the letter has not been guessed, push to array.
-
-//             lettersGuessed.push(userGuess);
-//         }
-
-
-//         // Update text.
-
-
-
-
-//     } else {
-//         alert("Game Over!")
-//     }
-
-// }
