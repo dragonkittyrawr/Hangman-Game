@@ -1,11 +1,9 @@
 // VARIABLES
 // ==============================================================================
 
+// Empty array for guessed letters.
+
 var lettersGuessed = [];
-
-var startScreen = "<p>Game Loaded.  You have " + guesses + " guesses left.</p>" + "<p></p>" + "<p>Pick a letter.</p>";
-
-
 
 // Create wordBank array.
 
@@ -19,25 +17,8 @@ var number = Math.floor((Math.random() * wordBank.length));
 
 var onDeck = (wordBank[number]).toLowerCase();
 
-// Number of guesses is based on length of word.
-
-var guesses = parseInt((onDeck.length) + 3);
-
-// Create blank onDeckLetters object.
-var onDeckLetters = new Object();
-
-// Create blank letters array.
-
-var letters = new Array();
-
-// Create blank blanks array.
-
-var blanks = new Array();
-
-
-
-// var guesses = "preGame";
 var guesses = "preGame";
+
 
 
 // FUNCTIONS
@@ -45,15 +26,23 @@ var guesses = "preGame";
 
 // PRE-GAME
 
+function letterbee() {
+
+    // Create blank onDeckLetters object.
+    var onDeckLetters = new Object();
+
+    // Create blank letters array.
+
+    var letters = new Array();
+
+    // Create blank blanks array.
+
+    var blanks = new Array();
 
 
+    // Number of guesses is based on length of word.
 
-//  GAMESTART
-
-function gameStart() {
-
-
-    document.querySelector("#game").innerHTML = startScreen;
+    guesses = parseInt((onDeck.length) + 3);
 
 
     // Loop based on selected word's length.
@@ -95,15 +84,21 @@ function gameStart() {
 
     // Display blanks on page.
 
+
+
+//  GAMESTART
+
+function gameStart() {
+
+    var startScreen = "<p>Game Loaded.  You have " + guesses + " guesses left.</p>" + "<p></p>" + "<p>Pick a letter.</p>";
+    document.querySelector("#game").innerHTML = startScreen;
     document.querySelector("#wordSpace").innerHTML = htmlBlanks;
-
-
 
 };
 
 // GAMEPLAY
 
-function gamePlay(event) {
+function gamePlay() {
     // Capture userGuess as lower case.
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
@@ -137,17 +132,15 @@ function gamePlay(event) {
     };
 };
 
+};
+
 
 // MAIN PROCESS
 // ==============================================================================
 
 // PREGAME
 
-if (guesses === 0) {
-    alert("Game Over!");
-};
-
-document.onkeyup = function(event) {
+document.onkeyup = function hangman(event) {
 
     // Captures the key press.
     var go = event.keyCode;
@@ -155,23 +148,30 @@ document.onkeyup = function(event) {
     // FOR TESTING ONLY
     console.log(go);
 
+    // GAMESTART
+
+    // If the user presses the space key the game loads.
+    if (go === 0 || go === 32) {
+
+        letterbee();
+        // gameStart();
 
 
-// GAMESTART
+        // GAMEPLAY
 
-// If the user presses the space key the game loads.
-if (go === 0 || go === 32) {
+        if (guesses !== "preGame") {
+            return;
+        }
 
-    gameStart();
+        letterbee();
+        // gamePlay();
+    };
 
 };
 
-// GAMEPLAY
 
-if (guesses !== "preGame") {
+// var guesses = "preGame";
 
-    gamePlay();
-
-};
-
-};
+// if (guesses === 0) {
+//     alert("Game Over!");
+// };
