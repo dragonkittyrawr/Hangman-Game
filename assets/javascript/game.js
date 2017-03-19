@@ -71,25 +71,23 @@ function preGame() {
 
     guesses = "preGame";
 
-    var polo = [guesses, theBlanks, marco, onDeckLetters, letters, blanks];
+    // var polo = [theBlanks, onDeckLetters];
 
     // FOR TESTING ONLY
-    // console.log(polo);
+    console.log(onDeckLetters);
 
-    return (polo);
+    return (onDeckLetters);
 };
 
 
 function gameStart() {
 
-    var marco = preGame();
+    onDeckLetters = preGame();
 
-    var guesses = marco[0];
-    var theBlanks = marco[1];
-    var marco = marco[2];
-    var onDeckLetters = marco[3];
-    var letters = marco[4];
-    var blanks = marco[5];
+    var theBlanks = onDeckLetters.b.join(" ");
+    var blanks = onDeckLetters.b;
+    var letters = onDeckLetters.l;
+    
 
     //  GAMESTART
 
@@ -109,8 +107,6 @@ function gameStart() {
 
     // Number of guesses is based on length of word.
 
-
-
     return;
 
 };
@@ -118,18 +114,25 @@ function gameStart() {
 
 // GAMEPLAY
 
-function gamePlay(event) {
+document.onkeyup = function gamePlay(event) {
 
-    var marco = preGame();
+    var userGuess = event.key;
 
-    var guesses = marco[0];
-    var theBlanks = marco[1];
-    var marco = marco[2];
-    var onDeckLetters = marco[3];
-    var letters = marco[4];
-    var blanks = marco[5];
+    onDeckLetters = preGame();
 
-    
+    var theBlanks = onDeckLetters.b.join(" ");
+    var blanks = onDeckLetters.b;
+    var letters = onDeckLetters.l;
+
+    // var marco = preGame();
+
+    // var theBlanks = marco[1];
+    // var marco = marco[2];
+    // var onDeckLetters = marco[3];
+    // var letters = marco[4];
+    // var blanks = marco[5];
+
+    guesses = parseInt((onDeck.length) + 3);
 
     // FOR TESTING ONLY
     console.log(userGuess);
@@ -140,10 +143,10 @@ function gamePlay(event) {
     if (guesses > 0) {
 
 
-        for (var w = 0; w < onDeckLetters.blanks.length; w++) {
+        for (var w = 0; w < onDeckLetters.b.length; w++) {
 
             // Look for userGuess in onDeckLetters.
-            if (onDeckLetters.indexOf(userGuess) === -1) {
+            if (onDeckLetters.l.indexOf(userGuess) === -1) {
                 guesses--;
             }
 
@@ -177,11 +180,11 @@ preGame();
 
 // document.querySelector("#startBtn").addEventListener("click", gameStart()); {
 
-document.onkeyup = function gamePlay(event) {
+// document.onkeyup = function gamePlay(event) {
     
-    // Capture userGuess as lower case.
-    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+//     // Capture userGuess as lower case.
+//     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
-};
+// };
 
 // };
