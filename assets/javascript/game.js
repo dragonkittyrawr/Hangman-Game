@@ -1,9 +1,7 @@
 // VARIABLES
 // ==============================================================================
 
-// Empty array for guessed letters.
 
-var lettersGuessed = [];
 
 // Create blank onDeckLetters object.
 
@@ -17,6 +15,9 @@ var letters = [];
 
 var blanks = [];
 
+// Empty array for guessed letters.
+
+var lettersGuessed = [];
 
 // Create wordBank array of villager names.
 
@@ -82,12 +83,12 @@ function preGame() {
 
 function gameStart() {
 
-    onDeckLetters = preGame();
+    // Re-establish variables from preGame.
 
-    var theBlanks = onDeckLetters.b.join(" ");
-    var blanks = onDeckLetters.b;
-    var letters = onDeckLetters.l;
-    
+    theBlanks = onDeckLetters.b.join(" ");
+    blanks = onDeckLetters.b;
+    letters = onDeckLetters.l;
+
 
     //  GAMESTART
 
@@ -97,6 +98,8 @@ function gameStart() {
 
     var htmlBlanks = theBlanks;
 
+    // Number of guesses is based on length of word.
+
     guesses = parseInt((onDeck.length) + 3);
 
     // Display blanks on page.
@@ -105,86 +108,85 @@ function gameStart() {
     document.querySelector("#game").innerHTML = startScreen;
     document.querySelector("#wordSpace").innerHTML = htmlBlanks;
 
-    // Number of guesses is based on length of word.
 
-    return;
+    // FOR TESTING ONLY
+    // console.log(guesses);
+
+
+
+    return (guesses);
 
 };
 
-
 // GAMEPLAY
 
-document.onkeyup = function gamePlay(event) {
+document.onkeydown = function guessCap(event) {
 
-    var userGuess = event.key;
+    userGuess = event.key;
+    // console.log(userGuess);
+};
 
-    onDeckLetters = preGame();
 
-    var theBlanks = onDeckLetters.b.join(" ");
-    var blanks = onDeckLetters.b;
-    var letters = onDeckLetters.l;
+function guessLog() {
 
-    // var marco = preGame();
-
-    // var theBlanks = marco[1];
-    // var marco = marco[2];
-    // var onDeckLetters = marco[3];
-    // var letters = marco[4];
-    // var blanks = marco[5];
-
-    guesses = parseInt((onDeck.length) + 3);
-
-    // FOR TESTING ONLY
     console.log(userGuess);
-    console.log(guesses);
+
+    console.log(lettersGuessed);
+
+    // Look for userGuess in lettersGuessed.
+    if (lettersGuessed.indexOf(userGuess) === -1) {
+
+        // If the letter has not been guessed, push to array.
+
+        lettersGuessed.push(userGuess);
+
+        console.log(lettersGuessed);
+    };
+
+    // Create html to display letters user has guessed.
+
+    var htmlGuess = lettersGuessed.join(" ");
+
+    console.log(htmlGuess);
+
+    // Display blanks on page.
+
+    document.querySelector("#guessedLetters").innerHTML = htmlGuess;
+};
+
+
+document.onkeyup = function gamePlay() {
+
+    // Re-establish variables from preGame.
+
+    theBlanks = onDeckLetters.b.join(" ");
+    blanks = onDeckLetters.b;
+    letters = onDeckLetters.l;
+
+    // Create HTML for gameScreen.
+
+    var gameScreen = "<p>You have " + guesses + " guesses left.</p>" + "<p></p>" + "<p>Pick a letter.</p>";
+    document.querySelector("#game").innerHTML = gameScreen;
 
     // Guesses left check.
 
-    if (guesses > 0) {
+    if (guesses === 0) {
+        // Game ends at 0 guesses.
+        alert("Game Over");
+    } else if (guesses > 0) {
+        guessLog();
+    };
 
-
-        for (var w = 0; w < onDeckLetters.b.length; w++) {
-
-            // Look for userGuess in onDeckLetters.
-            if (onDeckLetters.l.indexOf(userGuess) === -1) {
-                guesses--;
-            }
-
-            // Look for userGuess in lettersGuessed.
-            if (lettersGuessed.indexOf(userGuess) === -1) {
-
-                // If the letter has not been guessed, push to array.
-
-                lettersGuessed.push(userGuess);
-                // Create html to display blanks.
-
-                var htmlGuess = lettersGuessed;
-
-                // Display blanks on page.
-
-                document.querySelector("#guessedLetters").innerHTML = htmlGuess;
-            };
-        };
+    // Look for userGuess in onDeckLetters.
+    if (onDeckLetters.l.indexOf(userGuess) === -1) {
+        guesses -= 1;
     };
 };
 
 
-
-// #nobkgrd
-
 // MAIN PROCESS
 // ==============================================================================
 
-
 preGame();
 
-// document.querySelector("#startBtn").addEventListener("click", gameStart()); {
-
-// document.onkeyup = function gamePlay(event) {
-    
-//     // Capture userGuess as lower case.
-//     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-
-// };
-
-// };
+// document.querySelector("#startBtn").addEventListener("click", gameStart());
