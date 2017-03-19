@@ -33,6 +33,8 @@ var onDeck = (wordBank[number]).toLowerCase();
 
 var guesses = "waiting";
 
+var gameScreen = document.querySelector("#game");
+
 // FUNCTIONS
 // ==============================================================================
 
@@ -92,7 +94,7 @@ function gameStart() {
 
     //  GAMESTART
 
-    document.querySelector("#startBtn").style.visibility = "hidden";
+    document.querySelector("#startBtn").style.display = "none";
 
     // Create html to display blanks.
 
@@ -104,15 +106,12 @@ function gameStart() {
 
     // Display blanks on page.
 
-    var startScreen = "<p>Game Loaded.</p>" + "<p>You have " + guesses + " guesses left.</p>" + "<p></p>" + "<p>Pick a letter.</p>";
-    document.querySelector("#game").innerHTML = startScreen;
-    document.querySelector("#wordSpace").innerHTML = htmlBlanks;
+    var startScreen = "<h1>Can you guess the villager's name?</h1>" + "<br>" + "<br>" + "<h1>" + theBlanks + "</h1>" + "<br>" + "<br>" + "<br>" + "<br>" + "<h3>You have " + guesses + " guesses. Pick a letter.</h3>";
 
+    gameScreen.innerHTML = startScreen;
 
     // FOR TESTING ONLY
     // console.log(guesses);
-
-
 
     return (guesses);
 
@@ -151,7 +150,11 @@ function guessLog() {
 
     // Display blanks on page.
 
-    document.querySelector("#guessedLetters").innerHTML = htmlGuess;
+    var guessedLetters = document.createElement("div");
+
+    gameScreen.appendChild(guessedLetters);
+
+    guessedLetters.innerHTML = "<br>" + "<br>" + "<br>" + "<br>" + "<h3>Letters Guessed: " + htmlGuess + "</h3>";
 };
 
 
@@ -163,25 +166,64 @@ document.onkeyup = function gamePlay() {
     blanks = onDeckLetters.b;
     letters = onDeckLetters.l;
 
+    var guessChk = letters.indexOf(userGuess);
+
+    // FOR TESTING ONLY
+
+    console.log(guessChk);
+
     // Create HTML for gameScreen.
 
-    var gameScreen = "<p>You have " + guesses + " guesses left.</p>" + "<p></p>" + "<p>Pick a letter.</p>";
-    document.querySelector("#game").innerHTML = gameScreen;
+    // var wordSpace = document.createElement("div");
+
+    // gameScreen.appendChild(wordSpace);
+
+    // wordSpace.innerHTML = "<h1>" + theBlanks + "</h1>";
+
+    var gameOn = "<h1>" + theBlanks + "</h1>" + "<br>" + "<br>" + "<br>" + "<br>" + "<h3>You have " + guesses + " guesses. Pick a letter.</h3>";
+
+    if (guesses !== "waiting" && guesses !== "preGame") {
+        document.querySelector("#game").innerHTML = gameOn;
+    };
 
     // Guesses left check.
 
+    // Game ends at 0 guesses.
     if (guesses === 0) {
-        // Game ends at 0 guesses.
-        alert("Game Over");
-    } else if (guesses > 0) {
-        guessLog();
-    };
 
-    // Look for userGuess in onDeckLetters.
-    if (onDeckLetters.l.indexOf(userGuess) === -1) {
-        guesses -= 1;
+        gameOver();
+
+    } else {
+
+        // Look for userGuess in onDeckLetters.
+        if (letters.indexOf(userGuess) === -1) {
+            guesses -= 1;
+            guessLog();
+
+            // FOR TESTING ONLY
+
+            console.log(letters.indexOf(userGuess));
+        } else {
+            blanks[guessChk] = (letters[guessChk]);
+
+        };
     };
 };
+
+function gameOver() {
+
+    var gameOverScr = "<h1>" + theBlanks + "</h1>" + "<br>" + "<br>" + "<br>" + "<br>" + "<h3>You're out of guesses! The villager's name is " + onDeck + ".</h3>";
+
+    document.querySelector("#game").innerHTML = gameOverScr;
+
+    document.querySelector("#startBtn").style.display = "inline";
+
+    // setTimeout(location.reload(), 6000000);
+
+
+};
+
+
 
 
 // MAIN PROCESS

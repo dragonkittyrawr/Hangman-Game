@@ -6,7 +6,6 @@
     <title>Hangman</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    
     <!-- <link rel="icon" type="image/png" href="/assets/images/favicon.ico"> -->
     <!-- <link rel="stylesheet" type="text/css" href="http://www.animal-crossing.com/assets/css/main.css"> -->
 </head>
@@ -17,21 +16,22 @@
             <div id="clouds"></div>
             <div id="noclouds"></div>
             <header>
-                <h1>Welcome to Animal Crossing</h1>
+                <h1>Welcome to Animal Crossing!</h1>
             </header>
             <div id="featured">
                 <div class="featured-top-border"></div>
-                <div class="featured-content">
-                    <div id="game" style="text-align:center;">
-                        <header class="featured-titles">
-                            <h1 id="startBtn" onclick="gameStart()">Click Here to Start</h1>
-                        </header>
-                    </div>
-                    <h1><div id="guessedLetters" style="text-align:center;"></div></h1>
-                    <h1><div id="wordSpace" style="text-align:center;"></div></h1>
+                <div class="featured-content" id="startBtn">
+                    <header class="featured-titles" onclick="gameStart()">
+                        <h1>Click Here to Start</h1>
+                    </header>
                 </div>
+                <div id="game" style="text-align:center;"></div>
+                <!-- <div id="guessedLetters" style="text-align:center;"></div>
+                        <div id="wordSpace" style="text-align:center;"></div> -->
             </div>
         </div>
+    </div>
+    </div>
     </div>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
