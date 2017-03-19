@@ -1402,6 +1402,10 @@ body {
     transform: translateY(-34%);
 }
 
+#wrapper #featured #nobkgrd .featured-content header.featured-titles h1 {
+    text-align: center!important;
+}
+
 #wrapper #featured #startBtn .featured-content header.featured-titles {
     background: transparent url('../images/wood-bg.png?1438880351') no-repeat;
     background-size: contain;
@@ -2300,6 +2304,13 @@ body {
 #timeline #timeline-modal-details #new-leaf-welcome-amiibo:target ~ #modal-mask #new-leaf-welcome-amiibo-modal {
     display: block;
 }
+
+
+#game #wordSpace #guessedLetters {
+	text-align: center!important; }
+}
+
+
 
 @media only screen and (max-width: 30em) {
     #wrapper #featured .featured-content header.featured-titles {

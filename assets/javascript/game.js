@@ -5,7 +5,20 @@
 
 var lettersGuessed = [];
 
-// Create wordBank array.
+// Create blank onDeckLetters object.
+
+var onDeckLetters = {};
+
+// Create blank letters array.
+
+var letters = [];
+
+// Create blank blanks array.
+
+var blanks = [];
+
+
+// Create wordBank array of villager names.
 
 var wordBank = ["Agent S", "Agnes", "Al", "Alfonso", "Alice", "Alli", "Amelia", "Anabelle", "Anchovy", "Angus", "Anicotti", "Ankha", "Annalisa", "Annalise", "Antonio", "Apollo", "Apple", "Astrid", "Aurora", "Ava", "Avery", "Axel", "Baabara", "Bam", "Bangle", "Barold", "Beardo", "Beau", "Becky", "Bella", "Benedict", "Benjamin", "Bertha", "Bettina", "Bianca", "Biff", "Big Top", "Bill", "Biskit", "Blaire", "Blanche", "Bluebear", "Bob", "Bonbon", "Bones", "Boomer", "Boone", "Bree", "Broccolo", "Broffina", "Bruce", "Bubbles", "Buck", "Bud", "Bunnie", "Butch", "Cally", "Camofrog", "Canberra", "Carmen", "Caroline", "Celia", "Cesar", "Chadder", "Charlise", "Cheri", "Cherry", "Chester", "Chevre", "Chief", "Chops", "Chow", "Chrissy", "Claudia", "Clay", "Clyde", "Coach", "Cobb", "Coco", "Cole", "Colton", "Cookie", "Cousteau", "Cranston", "Croque", "Cube", "Curlos", "Curly", "Curt", "Cyrano", "Daisy", "Deena", "Deirdre", "Del", "Deli", "Derwin", "Diana", "Diva", "Dizzy", "Doc", "Dora", "Dotty", "Drago", "Drake", "Drift", "Ed", "Egbert", "Elise", "Elmer", "Eloise", "Elvis", "Erik", "Eugene", "Eunice", "Fang", "Fauna", "Felicity", "Filbert", "Flip", "Flo", "Flora", "Flurry", "Francine", "Frank", "Freckles", "Freya", "Friga", "Frita", "Frobert", "Fuchsia", "Gabi", "Gala", "Gaston", "Gayle", "Genji", "Gigi", "Gladys", "Gloria", "Goldie", "Goose", "Graham", "Greta", "Grizzly", "Groucho", "Gruff", "Gwen", "Hamlet", "Hamphrey", "Hans", "Harry", "Hazel", "Henry", "Hippeux", "Hopper", "Hugh", "Iggly", "Jacques", "Jambette", "Jay", "Jeremiah", "Jitters", "Joey", "Julian", "Kabuki", "Katt", "Keaton", "Ken", "Kevin", "Kid Cat", "Kidd", "Kiki", "Kitt", "Kitty", "Klaus", "Knox", "Kody", "Kyle", "Leonardo", "Lily", "Limberg", "Lionel", "Lobo", "Lolly", "Lopez", "Lucha", "Lucky", "Lucy", "Lyman", "Mac", "Maelle", "Mallary", "Maple", "Marcel", "Marcie", "Margie", "Marina", "Marshal", "Mathilda", "Melba", "Merengue", "Merry", "Midge", "Mint", "Mira", "Miranda", "Mitzi", "Moe", "Molly", "Monique", "Monty", "Moose", "Mott", "Muffy", "Nan", "Nana", "Naomi", "Nate", "Nibbles", "O'Hare", "Octavian", "Olaf", "Olivia", "Opal", "Ozzie", "Pancetti", "Pango", "Papi", "Pashmina", "Pate", "Patty", "Paula", "Peaches", "Peanut", "Pecan", "Peck", "Peewee", "Peggy", "Pekoe", "Penelope", "Phil", "Phoebe", "Pierce", "Pietro", "Pinky", "Pippy", "Pompom", "Poncho", "Poppy", "Portia", "Prince", "Puck", "Puddles", "Pudge", "Punchy", "Purrl", "Queenie", "Quillson", "Rasher", "Renée", "Rhonda", "Ribbot", "Ricky", "Rizzo", "Roald", "Robin", "Rocco", "Rocket", "Rod", "Rodeo", "Rodney", "Rolf", "Rooney", "Rory", "Roscoe", "Rosie", "Rowan", "Ruby", "Rudy", "Sally", "Samson", "Savannah", "Scoot", "Shari", "Sheldon", "Shep", "Simon", "Skye", "Sly", "Snake", "Soleil", "Sparro", "Spork", "Sprinkle", "Static", "Sterling", "Stinky", "Stitches", "Sydney", "Sylvia", "T-Bone", "Tabby", "Tammi", "Tammy", "Tangy", "Tank", "Teddy", "Tex", "Tia", "Tiffany", "Timbra", "Tipper", "Tom", "Truffles", "Tucker", "Tutu", "Twiggy", "Velma", "Vesta", "Vic", "Victoria", "Violet", "Vladimir", "Walker", "Walt", "Wart Jr.", "Wendy", "Whitney", "Willow", "Winnie", "Wolfgang", "Yuka", "Zell", "Zucker"];
 
@@ -13,37 +26,16 @@ var wordBank = ["Agent S", "Agnes", "Al", "Alfonso", "Alice", "Alli", "Amelia", 
 
 var number = Math.floor((Math.random() * wordBank.length));
 
-// onDeck is the selected word.
-
 var onDeck = (wordBank[number]).toLowerCase();
 
-var guesses = "preGame";
+// onDeck is the selected word.
 
-
+var guesses = "waiting";
 
 // FUNCTIONS
 // ==============================================================================
 
-// PRE-GAME
-
-function letterbee() {
-
-    // Create blank onDeckLetters object.
-    var onDeckLetters = new Object();
-
-    // Create blank letters array.
-
-    var letters = new Array();
-
-    // Create blank blanks array.
-
-    var blanks = new Array();
-
-
-    // Number of guesses is based on length of word.
-
-    guesses = parseInt((onDeck.length) + 3);
-
+function preGame() {
 
     // Loop based on selected word's length.
 
@@ -63,8 +55,8 @@ function letterbee() {
 
         // FOR TESTING ONLY
 
-        console.log(letters);
-        console.log(blanks);
+        // console.log(letters);
+        // console.log(blanks);
 
     };
 
@@ -73,60 +65,74 @@ function letterbee() {
     onDeckLetters.l = letters;
     onDeckLetters.b = blanks;
 
-    // Assign this.
+    // Assign above to empty onDeckLetters object.
 
+    var marco = Object.assign({}, onDeckLetters);
 
-    var polo = Object.assign({}, onDeckLetters);
+    guesses = "preGame";
 
-    return (theBlanks, guesses, onDeckLetters, onDeck, letters, blanks);
+    var polo = [guesses, theBlanks, marco, onDeckLetters, letters, blanks];
 
+    // FOR TESTING ONLY
+    // console.log(polo);
 
+    return (polo);
 };
-
-
-
-
-
-//  GAMESTART
 
 
 function gameStart() {
 
+    var marco = preGame();
 
+    var guesses = marco[0];
+    var theBlanks = marco[1];
+    var marco = marco[2];
+    var onDeckLetters = marco[3];
+    var letters = marco[4];
+    var blanks = marco[5];
 
-
+    //  GAMESTART
 
     document.querySelector("#startBtn").style.visibility = "hidden";
 
-
-
-    var theBlanks = letterbee();
-
     // Create html to display blanks.
 
-    var htmlBlanks = "<p>" + theBlanks + "</p>";
+    var htmlBlanks = theBlanks;
+
+    guesses = parseInt((onDeck.length) + 3);
 
     // Display blanks on page.
 
-    var startScreen = "<p>Game Loaded.  You have " + guesses + " guesses left.</p>" + "<p></p>" + "<p>Pick a letter.</p>";
+    var startScreen = "<p>Game Loaded.</p>" + "<p>You have " + guesses + " guesses left.</p>" + "<p></p>" + "<p>Pick a letter.</p>";
     document.querySelector("#game").innerHTML = startScreen;
     document.querySelector("#wordSpace").innerHTML = htmlBlanks;
+
+    // Number of guesses is based on length of word.
+
+
+
+    return;
+
 };
+
 
 // GAMEPLAY
 
-function gamePlay() {
+function gamePlay(event) {
 
-    var guesses = letterbee();
+    var marco = preGame();
 
-    // Capture userGuess as lower case.
-    var userGuess = String.fromCharCode(gamePlay.keyCode).toLowerCase();
+    var guesses = marco[0];
+    var theBlanks = marco[1];
+    var marco = marco[2];
+    var onDeckLetters = marco[3];
+    var letters = marco[4];
+    var blanks = marco[5];
+
+    
 
     // FOR TESTING ONLY
     console.log(userGuess);
-
-    // Create an empty lettersGuessed array.
-
     console.log(guesses);
 
     // Guesses left check.
@@ -147,17 +153,18 @@ function gamePlay() {
                 // If the letter has not been guessed, push to array.
 
                 lettersGuessed.push(userGuess);
-            }
-            // Update text.
+                // Create html to display blanks.
 
+                var htmlGuess = lettersGuessed;
+
+                // Display blanks on page.
+
+                document.querySelector("#guessedLetters").innerHTML = htmlGuess;
+            };
         };
-
-    // } else {
-    //     alert("Game Over!");
-
-    // };
-
+    };
 };
+
 
 
 // #nobkgrd
@@ -165,27 +172,16 @@ function gamePlay() {
 // MAIN PROCESS
 // ==============================================================================
 
-// PREGAME
 
-// GAMESTART
+preGame();
 
-document.querySelector("#startBtn").addEventListener("click", gameStart()); {
+// document.querySelector("#startBtn").addEventListener("click", gameStart()); {
 
-
-    // GAMEPLAY
-
-    if (guesses !== "preGame") {
-
-        gamePlay();
-
-    };
-};
+document.onkeyup = function gamePlay(event) {
+    
+    // Capture userGuess as lower case.
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
 };
 
-
-// var guesses = "preGame";
-
-// if (guesses === 0) {
-//     alert("Game Over!");
 // };
