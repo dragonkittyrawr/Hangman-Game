@@ -38,8 +38,7 @@ var gameScreen = document.querySelector("#game");
 // FUNCTIONS
 // ==============================================================================
 
-function preGame() {
-
+function wordSelect() {
     // Loop based on selected word's length.
 
     for (var i = 0; i < onDeck.length; i++) {
@@ -61,7 +60,7 @@ function preGame() {
         // console.log(letters);
         // console.log(blanks);
 
-    };
+    }
 
     // Define content of onDeckLetters object {l: b,}.
 
@@ -82,148 +81,7 @@ function preGame() {
     console.log(onDeckLetters);
 
     return (onDeckLetters);
-};
-
-
-function gameStart() {
-
-    // Re-establish variables from preGame.
-
-    theBlanks = onDeckLetters.b.join(" ");
-    blanks = onDeckLetters.b;
-    letters = onDeckLetters.l;
-
-
-    //  GAMESTART
-
-    document.querySelector("#startBtn").style.display = "none";
-
-    // Create html to display blanks.
-
-    var htmlBlanks = theBlanks;
-
-    // Number of guesses is based on length of word.
-
-    guesses = parseInt((onDeck.length) + 3);
-
-    // Display blanks on page.
-
-    var startScreen = "<h1>Can you guess the villager's name?</h1>" + "<br>" + "<br>" + "<h1>" + theBlanks + "</h1>" + "<br>" + "<br>" + "<br>" + "<br>" + "<h3>You have " + guesses + " guesses. Pick a letter.</h3>";
-
-    gameScreen.innerHTML = startScreen;
-
-    // FOR TESTING ONLY
-    // console.log(guesses);
-
-    return (guesses);
-
-};
-
-// GAMEPLAY
-
-document.onkeydown = function guessCap(event) {
-
-    userGuess = event.key;
-    // console.log(userGuess);
-};
-
-
-function guessLog() {
-
-    console.log(userGuess);
-
-    console.log(lettersGuessed);
-
-    // Look for userGuess in lettersGuessed.
-    if (lettersGuessed.indexOf(userGuess) === -1) {
-
-        // If the letter has not been guessed, push to array.
-
-        lettersGuessed.push(userGuess);
-
-        console.log(lettersGuessed);
-    };
-
-    // Create html to display letters user has guessed.
-
-    var htmlGuess = lettersGuessed.join(" ");
-
-    console.log(htmlGuess);
-
-    // Display blanks on page.
-
-    var guessedLetters = document.createElement("div");
-
-    gameScreen.appendChild(guessedLetters);
-
-    guessedLetters.innerHTML = "<br>" + "<br>" + "<br>" + "<br>" + "<h3>Letters Guessed: " + htmlGuess + "</h3>";
-};
-
-
-document.onkeyup = function gamePlay() {
-
-    // Re-establish variables from preGame.
-
-    theBlanks = onDeckLetters.b.join(" ");
-    blanks = onDeckLetters.b;
-    letters = onDeckLetters.l;
-
-    var guessChk = letters.indexOf(userGuess);
-
-    // FOR TESTING ONLY
-
-    console.log(guessChk);
-
-    // Create HTML for gameScreen.
-
-    // var wordSpace = document.createElement("div");
-
-    // gameScreen.appendChild(wordSpace);
-
-    // wordSpace.innerHTML = "<h1>" + theBlanks + "</h1>";
-
-    var gameOn = "<h1>" + theBlanks + "</h1>" + "<br>" + "<br>" + "<br>" + "<br>" + "<h3>You have " + guesses + " guesses. Pick a letter.</h3>";
-
-    if (guesses !== "waiting" && guesses !== "preGame") {
-        document.querySelector("#game").innerHTML = gameOn;
-    };
-
-    // Guesses left check.
-
-    // Game ends at 0 guesses.
-    if (guesses === 0) {
-
-        gameOver();
-
-    } else {
-
-        // Look for userGuess in onDeckLetters.
-        if (letters.indexOf(userGuess) === -1) {
-            guesses -= 1;
-            guessLog();
-
-            // FOR TESTING ONLY
-
-            console.log(letters.indexOf(userGuess));
-        } else {
-            blanks[guessChk] = (letters[guessChk]);
-
-        };
-    };
-};
-
-function gameOver() {
-
-    var gameOverScr = "<h1>" + theBlanks + "</h1>" + "<br>" + "<br>" + "<br>" + "<br>" + "<h3>You're out of guesses! The villager's name is " + onDeck + ".</h3>";
-
-    document.querySelector("#game").innerHTML = gameOverScr;
-
-    document.querySelector("#startBtn").style.display = "inline";
-
-    // setTimeout(location.reload(), 6000000);
-
-
-};
+}
 
 
 
@@ -231,6 +89,6 @@ function gameOver() {
 // MAIN PROCESS
 // ==============================================================================
 
-preGame();
+wordSelect();
 
-// document.querySelector("#startBtn").addEventListener("click", gameStart());
+document.addEventListener("keyup", function, userGuess);

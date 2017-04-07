@@ -1,6 +1,6 @@
 /* Borrowed, for the furtherence of my education, from http://www.animal-crossing.com/assets/css/main.css */
 
-@import url(http://fonts.googleapis.com/css?family=Arvo:400,700);
+@import url(https://fonts.googleapis.com/css?family=Arvo:400,700);
 html,
 body,
 div,
@@ -2305,13 +2305,12 @@ body {
     display: block;
 }
 
-
 #game #wordSpace #guessedLetters {
-	text-align: center!important; }
+    text-align: center!important;
 }
 
 
-
+}
 @media only screen and (max-width: 30em) {
     #wrapper #featured .featured-content header.featured-titles {
         -moz-transform: translateY(-70%);
@@ -2319,148 +2318,181 @@ body {
         -webkit-transform: translateY(-70%);
         transform: translateY(-70%);
     }
+    
     #wrapper #featured .featured-content .wrapper.content {
         margin-top: -7%;
     }
+    
     #wrapper #featured .featured-content .featured-title {
         padding: 0;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image {
         width: 340px;
         height: 340px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image .title {
         width: 310px;
         height: 110px;
         left: 15px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image a.bevel {
         width: 340px;
         height: 340px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image .mask {
         width: 300px;
         top: 20px;
         left: 20px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image .character {
         height: 200px;
         bottom: 5px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale.newleaf .image .title {
         width: 151px;
         left: 27%;
         top: -1%;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale.amiibo .image .title {
         width: 145px;
         top: 10px;
     }
+    
     #amiibo .amiibo-content {
         padding: 50px 0;
     }
+    
     #amiibo .amiibo-content .info p.view-card-list a {
         width: 312px;
     }
+    
     #timeline .timeline-control-wrapper {
         width: 300px;
     }
+    
     #timeline .timeline-control-wrapper .timeline-control {
         top: 61.3%;
         background-size: contain;
         width: 50px;
         height: 50px;
     }
+    
     #timeline #timeline-modal-details .modal-container {
         padding: 15px 25px;
     }
+    
     #timeline #timeline-modal-details .modal-container .modal-content .pack-shot img {
         max-width: 30%;
     }
+    
     #timeline #timeline-modal-details .modal-container .modal-content .details h1 {
         font-size: 1.55556rem;
     }
+    
     #timeline #timeline-modal-details .modal-container .modal-content .details .description p {
         font-size: 1rem;
     }
+    
     #timeline #timeline-modal-details .modal-container .modal-content .details .description img {
         max-width: 10%;
     }
 }
-
 @media only screen and (min-width: 40.063em) and (max-width: 54em) {
     #wrapper #featured .featured-content .featured-title .details p.learn-more {
         width: 300px;
     }
+    
     #timeline #timeline-modal-details .modal-container {
         padding: 33px 35px;
     }
+    
     #timeline #timeline-modal-details .modal-container .modal-content .pack-shot img {
         max-width: 90%;
     }
 }
-
 @media only screen and (min-width: 40.063em) {
     #noclouds {
         background-size: 120%;
     }
+    
     #wrapper #featured {
         margin-top: -33.3%;
     }
+    
     #wrapper #featured .featured-content header.featured-titles {
         width: 260px;
     }
+    
     #wrapper #featured .featured-content header.featured-titles h1 {
         font-size: 185%;
         text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.25);
         text-shadow: 1px 2px 0 true rgba(0, 0, 0, 0.25);
     }
+    
     #wrapper #featured .featured-content .featured-title .details .wiiu .available {
         padding-left: 11%;
         letter-spacing: -0.01em;
     }
+    
     #wrapper #featured .featured-content .featured-title .details .wiiu .platform {
         margin-right: 90px;
         margin-top: -4px;
         width: 20%;
     }
+    
     #wrapper #featured .featured-content .featured-title .details p.learn-more {
         width: 300px;
     }
+    
     #wrapper #featured .featured-content .featured-title .details p.available {
         float: left;
         width: 52%;
         letter-spacing: -0.01em;
     }
+    
     #wrapper #featured .featured-content .featured-title .details p.platform {
         padding: 0;
         float: right;
         width: 47%;
     }
+    
     #wrapper #featured .featured-content .wrapper.content {
         margin-top: -1.5%;
     }
+    
     #wrapper #featured .featured-content .wrapper.content p.subhead {
         max-width: 60%;
     }
+    
     #amiibo .amiibo-content .content {
         margin-top: 3.5em;
     }
+    
     #amiibo .amiibo-content .cards > img {
         display: none;
     }
+    
     #amiibo .amiibo-content .cards-wrap.vp-b-10 .img:last-child {
         -moz-transform: rotate(-12deg) translate(-160px, -15px);
         -ms-transform: rotate(-12deg) translate(-160px, -15px);
         -webkit-transform: rotate(-12deg) translate(-160px, -15px);
         transform: rotate(-12deg) translate(-160px, -15px);
     }
+    
     #amiibo .amiibo-content .cards-wrap.vp-b-10 .img:first-child {
         -moz-transform: rotate(12deg) translate(160px, -15px);
         -ms-transform: rotate(12deg) translate(160px, -15px);
         -webkit-transform: rotate(12deg) translate(160px, -15px);
         transform: rotate(12deg) translate(160px, -15px);
     }
+    
     #amiibo .amiibo-content .info header h1 {
         display: block;
         font-size: 400%;
@@ -2472,40 +2504,52 @@ body {
         left: 25%;
         width: 50%;
     }
+    
     #amiibo .amiibo-content .info p.view-card-list a {
         width: 390px;
         font-size: 180%;
     }
+    
     #timeline {
         padding-bottom: 60px;
     }
+    
     #timeline .timeline-wrapper {
         background-position: 0 64.6%;
     }
+    
     #timeline .content {
         padding: 5em 0;
     }
+    
     #timeline header h1 {
         font-size: 3rem;
     }
+    
     #timeline .timeline-control-wrapper {
         width: 42.22222rem;
     }
+    
     #timeline .timeline-control-wrapper .timeline-control {
         top: 54%;
     }
+    
     #timeline .list-wrapper {
         width: 408px;
     }
+    
     #timeline ul li article:hover img.popped {
         display: inline;
     }
+    
     #timeline ul li article:hover img.standard {
         display: none;
     }
+    
     #timeline #timeline-modal-details .modal-container {
         padding-bottom: 60px;
     }
+    
     #timeline #timeline-modal-details .modal-container .modal-close:hover {
         -moz-transform: translateY(2px);
         -ms-transform: translateY(2px);
@@ -2513,50 +2557,58 @@ body {
         transform: translateY(2px);
         box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.25);
     }
+    
     #timeline #timeline-modal-details .modal-container .modal-content .pack-shot {
         float: left;
         width: 50%;
     }
+    
     #timeline #timeline-modal-details .modal-container .modal-content .details {
         text-align: left;
         margin-left: 53%;
     }
+    
     #timeline #timeline-modal-details .modal-container .modal-content .details h1 {
         padding-top: 0;
     }
+    
     #timeline #timeline-modal-details .modal-container .modal-content .details .description p {
         font-size: 1.1rem;
         line-height: 1.8rem;
     }
+    
     #timeline #timeline-modal-details .modal-container .modal-content .details .description a.more-button {
         max-width: 330px;
     }
 }
-
 @media (min-device-width: 768px) and (max-device-width: 1024px) {
     #timeline ul li article:hover img.standard {
         display: inline;
     }
+    
     #timeline ul li article:hover img.popped {
         display: none;
     }
 }
-
 @media only screen and (min-width: 54.063em) {
     #wrapper #featured {
         margin-top: -30.6%;
     }
+    
     #wrapper #featured .featured-content header.featured-titles {
         width: 270px;
     }
+    
     #wrapper #featured .featured-content header.featured-titles h1 {
         font-size: 166%;
         text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.25);
         text-shadow: 2px 3px 0 true rgba(0, 0, 0, 0.25);
     }
+    
     #wrapper #featured .featured-content .wrapper .content {
         margin-top: -1em;
     }
+    
     #wrapper #featured .featured-content .featured-title {
         padding-left: 0.55556rem;
         padding-right: 0.55556rem;
@@ -2565,18 +2617,22 @@ body {
         width: 49.5%;
         padding-bottom: 1em;
     }
+    
     #wrapper #featured .featured-content .featured-title .details p.learn-more {
         width: 270px;
     }
+    
     #wrapper #featured .featured-content .featured-title .details p.learn-more a {
         font-size: 166%;
     }
+    
     #wrapper #featured .featured-content .featured-title.full-width {
         width: 100%;
         float: left;
         display: block;
         padding: 0;
     }
+    
     #wrapper #featured .featured-content .divider {
         background: transparent center center url('../images/divider.png?1438988477') no-repeat;
         background-size: 80%;
@@ -2584,36 +2640,44 @@ body {
         height: 40px;
         margin-bottom: 4em;
     }
+    
     #wrapper #featured .featured-content .featured-title.full-width .scale {
         margin-left: 2.8em;
         float: none;
         position: absolute;
     }
+    
     #wrapper #featured .featured-content .featured-title.full-width .image .details {
         display: block;
         float: none;
         margin-left: 50%;
     }
+    
     #wrapper #featured .featured-content .featured-title.full-width .details {
         width: 48.5%;
         margin-left: 50%;
         margin-top: 1.5em;
         margin-bottom: 0;
     }
+    
     #wrapper #featured .featured-content .wrapper.content {
         margin-top: -1em;
     }
+    
     #wrapper #featured .featured-content .wrapper.content p.subhead {
         font-size: 1.05556rem;
         max-width: 55%;
     }
+    
     #amiibo .amiibo-content {
         padding: 50px 0;
     }
+    
     #amiibo .amiibo-content .content {
         margin-top: 0;
         position: relative;
     }
+    
     #amiibo .amiibo-content .cards {
         padding-left: 0.55556rem;
         padding-right: 0.55556rem;
@@ -2622,86 +2686,104 @@ body {
         width: 50%;
         position: absolute;
     }
+    
     #amiibo .amiibo-content .info {
         float: none;
         margin-left: 50%;
         width: 49%;
     }
+    
     #amiibo .amiibo-content .info header h1 {
         position: relative;
         width: auto;
         left: auto;
         top: auto;
     }
+    
     #amiibo .amiibo-content .info p.view-card-list a {
         font-size: 166%;
     }
+    
     #timeline {
         padding-bottom: 60px;
     }
+    
     #timeline .timeline-wrapper {
         background-position: 0 61.3%;
     }
+    
     #timeline .content {
         padding: 5em 0;
     }
+    
     #timeline header h1 {
         font-size: 3rem;
     }
+    
     #timeline .timeline-control-wrapper {
         width: 53.33333rem;
     }
+    
     #timeline .timeline-control-wrapper .timeline-control {
         top: 50.3%;
     }
+    
     #timeline .list-wrapper {
         width: 612px;
     }
 }
-
 @media only screen and (min-width: 54.063em) and (max-width: 71em) {
     #wrapper #featured .featured-content .featured-title .details footer .info {
         width: 100%;
         margin: 0;
         display: table;
     }
+    
     #wrapper #featured .featured-content .featured-title .details footer .info p {
         float: none;
         width: auto;
         display: table-cell;
         vertical-align: middle;
     }
+    
     #wrapper #featured .featured-content .featured-title .details footer .info p.platform {
         padding-top: 8px;
     }
+    
     #wrapper #featured .featured-content .featured-title .details footer .info.wiiu .available {
         padding-left: 0;
     }
+    
     #wrapper #featured .featured-content .featured-title .details footer .info.wiiu .platform {
         margin: 0;
         padding-top: 0;
         width: auto;
     }
+    
     #wrapper #featured .featured-content .featured-title.full-width {
         margin: 0 auto;
         max-width: 70rem;
     }
+    
     #wrapper #featured .featured-content .featured-title.full-width .scale {
         width: 405px;
         margin-right: 0;
     }
+    
     #wrapper #featured .featured-content .featured-title.full-width .details {
         width: 49%;
     }
     /*==============================
   =            AMIIBO            =
   ==============================*/
+    
     #amiibo .amiibo-content .cards-wrap.vp-b-10 .img:first-child {
         -moz-transform: rotate(12deg) translate(90px, -15px);
         -ms-transform: rotate(12deg) translate(90px, -15px);
         -webkit-transform: rotate(12deg) translate(90px, -15px);
         transform: rotate(12deg) translate(90px, -15px);
     }
+    
     #amiibo .amiibo-content .cards-wrap.vp-b-10 .img:last-child {
         -moz-transform: rotate(-12deg) translate(-90px, -15px);
         -ms-transform: rotate(-12deg) translate(-90px, -15px);
@@ -2709,247 +2791,299 @@ body {
         transform: rotate(-12deg) translate(-90px, -15px);
     }
 }
-
 @media only screen and (min-width: 71.063em) {
     #wrapper #featured {
         margin-top: -29.3%;
     }
+    
     #wrapper #featured .featured-content header.featured-titles {
         width: 25%;
     }
+    
     #wrapper #featured .featured-content header.featured-titles h1 {
         font-size: 210%;
     }
+    
     #wrapper #featured .featured-content .featured-title .details .wiiu .available {
         width: 67%;
         padding-left: 11%;
         letter-spacing: -0.01em;
     }
+    
     #wrapper #featured .featured-content .featured-title .details .wiiu .platform {
         margin-right: 45px;
         margin-top: -4px;
         width: 20%;
     }
+    
     #wrapper #featured .featured-content .featured-title .details p.learn-more {
         width: 300px;
     }
+    
     #wrapper #featured .featured-content .featured-title .details p.available {
         float: left;
         width: 52%;
         font-size: 115%;
         letter-spacing: -0.01em;
     }
+    
     #wrapper #featured .featured-content .featured-title .details p.platform {
         padding: 0;
         float: right;
         width: 47%;
     }
+    
     #wrapper #featured .featured-content .featured-title.full-width .scale {
         margin-left: 2.6em;
         margin-right: 2.8em;
     }
+    
     #wrapper #featured .featured-content .featured-title.full-width .details {
         margin-bottom: 1em;
         margin-top: 1em;
     }
+    
     #wrapper #featured .featured-content .wrapper.content {
         margin-top: -1.5em;
     }
+    
     #wrapper #featured .featured-content .wrapper.content p.subhead {
         font-size: 1.22222rem;
         max-width: 51%;
         margin-bottom: 3em;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale {
         margin-left: 0;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image {
         width: 500px;
         height: 500px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image .title {
         width: 489px;
         height: 174px;
         left: 5px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image a.bevel {
         height: 500px;
         width: 500px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image .mask {
         width: 435px;
         top: 33px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image .character {
         width: 160px;
         height: 285px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale.newleaf .image .title {
         width: 185px;
         left: 30%;
         height: 136px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale.newleaf .image .character {
         bottom: 19px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale.amiibo .image .title {
         width: 211px;
         left: 27%;
         top: 14px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale.amiibo .image .character {
         left: -63px;
     }
+    
     #amiibo .amiibo-content .info header h2 {
         white-space: nowrap;
         margin-left: -5px;
     }
+    
     #amiibo .amiibo-content .info p.view-card-list a {
         font-size: 155%;
     }
+    
     #timeline {
         padding-bottom: 60px;
     }
+    
     #timeline .content {
         padding: 5em 0;
     }
+    
     #timeline header h1 {
         font-size: 3rem;
     }
+    
     #timeline .timeline-control-wrapper {
         width: 70rem;
         max-width: 1025px;
     }
+    
     #timeline .list-wrapper {
         width: 816px;
     }
 }
-
 @media only screen and (min-width: 104.063em) {
     #noclouds {
         background-size: 2050px;
     }
+    
     #wrapper #featured .featured-content .featured-title.full-width {
         padding-bottom: 4em;
     }
+    
     #wrapper #featured .featured-top-border {
         height: 60px;
     }
+    
     #wrapper #featured .featured-content header.featured-titles {
         width: 25%;
     }
+    
     #wrapper #featured .featured-content header.featured-titles h1 {
         font-size: 250%;
     }
+    
     #wrapper #featured .featured-content .wrapper.content {
         margin-top: -2.5em;
     }
+    
     #wrapper #featured .featured-content .wrapper.content p.subhead {
         font-size: 1.22222rem;
     }
+    
     #wrapper #featured .featured-content .featured-title.full-width .scale {
         margin-left: 0.8em;
         margin-right: 0.6em;
     }
+    
     #wrapper #featured .featured-content .featured-title.full-width .details {
         margin-top: 6.5em;
         margin-bottom: 6.5em;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale {
         margin-left: 0;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image {
         width: 600px;
         height: 600px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image .title {
         width: 540px;
         height: 190px;
         left: 20px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image a.bevel {
         height: 600px;
         width: 600px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image .mask {
         width: 532px;
         top: 33px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale .image .character {
         width: 172px;
         height: 332px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale.newleaf .image .title {
         width: 232px;
         height: 169px;
         left: 30%;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale.newleaf .image .character {
         bottom: 10px;
         left: -60px;
         height: 316px;
         width: 204px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale.newleaf .image .character {
         bottom: 19px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale.amiibo .image .title {
         width: 280px;
         height: 223px;
         left: 26%;
         top: 17px;
     }
+    
     #wrapper #featured .featured-content .featured-title .scale.amiibo .image .character {
         width: 332px;
         left: -65px;
         bottom: 16px;
     }
+    
     #amiibo {
         margin-top: -60px;
     }
+    
     #amiibo .amiibo-top-border {
         height: 69px;
     }
+    
     #amiibo .amiibo-bottom-border {
         height: 68px;
     }
+    
     #timeline {
         margin-top: -60px;
     }
+    
     #timeline .timeline-wrapper {
         background-size: contain;
     }
 }
-
 @media only screen and (min-width: 115.063em) {
     #noclouds {
         background-size: 2050px;
         padding-top: 550px;
     }
+    
     #wrapper #featured {
         margin-top: -60px;
     }
+    
     #amiibo {
         margin-top: -63px;
     }
+    
     #amiibo .amiibo-top-border {
         height: 83px;
     }
+    
     #amiibo .amiibo-bottom-border {
         height: 82px;
     }
+    
     #timeline {
         margin-top: -63px;
     }
 }
-
 #footer-main {
     background: transparent url('../images/footer-bg.jpg?1438880351');
     border-top: 6px solid rgba(0, 0, 0, 0.35);
     position: relative;
     margin-top: -10px;
 }
-
 #footer-legal {
     margin: 0 auto;
     max-width: 77.77778rem;
@@ -2958,17 +3092,14 @@ body {
     position: relative;
     z-index: 2;
 }
-
 #footer-legal:before,
 #footer-legal:after {
     content: " ";
     display: table;
 }
-
 #footer-legal:after {
     clear: both;
 }
-
 #footer-legal .content {
     padding-left: 0.55556rem;
     padding-right: 0.55556rem;
@@ -2977,23 +3108,19 @@ body {
     width: 95%;
     text-align: center;
 }
-
 #footer-legal .content .social {
     display: none;
 }
-
 #footer-legal .legal {
     font: 0.83333rem Arial, sans-serif;
     line-height: 1.5rem;
     color: #fff;
     text-shadow: black 1px 1px 2px, black -1px -1px 2px;
 }
-
 #footer-legal .legal a {
     color: #fff;
     text-decoration: none;
 }
-
 #nintendo-footer {
     display: -ms-inline-flexbox;
     display: -webkit-inline-flexbox;
@@ -3014,35 +3141,30 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
 #nintendo-footer #footer-esrb-container {
     margin-right: 0 !important;
 }
-
 #nintendo-footer #footer-privacypolicy-container {
     margin-right: 0 !important;
     margin-left: 15px !important;
 }
-
 #nintendo-footer #footer-followus-container a img {
     margin-top: 4px;
 }
-
 #nintendo-footer > * {
     height: auto !important;
     float: none !important;
 }
-
 @media only screen and (max-width: 30em) {
     #footer-legal .content {
         width: 100%;
     }
 }
-
 @media only screen and (min-width: 40.063em) {
     #footer-main {
         margin-top: -60px;
     }
+    
     #footer-legal .content {
         padding-left: 0.55556rem;
         padding-right: 0.55556rem;
@@ -3053,7 +3175,6 @@ body {
         float: none;
     }
 }
-
 @media only screen and (min-width: 54.063em) {
     #footer-legal .content {
         padding-left: 0.55556rem;
@@ -3065,7 +3186,6 @@ body {
         float: none;
     }
 }
-
 @media only screen and (min-width: 71.063em) {
     #footer-legal .content {
         padding-left: 0.55556rem;
@@ -3077,20 +3197,16 @@ body {
         float: none;
     }
 }
-
 body[data-useragent*='WiiU'] #timeline #timeline-modal-details .modal-container {
     padding-bottom: 40px;
 }
-
 body[data-useragent*='WiiU'] #timeline #timeline-modal-details .modal-container .modal-content .pack-shot img {
     max-width: 69%;
 }
-
 body[data-useragent*='WiiU'] #timeline #timeline-modal-details .modal-container .modal-content .details .description p {
     font-size: 1rem;
     line-height: 1.5rem;
 }
-
 body.lang-es #wrapper #featured .featured-content header.featured-titles,
 body.lang-fr #wrapper #featured .featured-content header.featured-titles {
     width: auto;
@@ -3099,7 +3215,6 @@ body.lang-fr #wrapper #featured .featured-content header.featured-titles {
     background-position: center center;
     padding-top: 2px;
 }
-
 body.lang-es #amiibo .amiibo-content .info p.view-card-list a,
 body.lang-fr #amiibo .amiibo-content .info p.view-card-list a {
     display: table;
@@ -3107,12 +3222,10 @@ body.lang-fr #amiibo .amiibo-content .info p.view-card-list a {
     padding: 10px 20px;
     line-height: 1.25;
 }
-
 body.lang-es #amiibo .amiibo-content .info header h2,
 body.lang-fr #amiibo .amiibo-content .info header h2 {
     white-space: normal;
 }
-
 body.lang-es #timeline #timeline-modal-details .modal-container .modal-content .details .description a.more-button,
 body.lang-fr #timeline #timeline-modal-details .modal-container .modal-content .details .description a.more-button {
     height: auto;
@@ -3120,17 +3233,14 @@ body.lang-fr #timeline #timeline-modal-details .modal-container .modal-content .
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
 body.lang-fr #wrapper #featured .featured-content header.featured-titles {
     padding-top: 6px;
 }
-
 body.lang-fr #timeline ul li article dl dd.released {
     width: 100%;
     white-space: normal;
     padding: 12px;
 }
-
 .card-border {
     box-shadow: inset 0px 0px 0px 2px #b9b9b9;
     width: 100%;
@@ -3140,55 +3250,46 @@ body.lang-fr #timeline ul li article dl dd.released {
     left: 0;
     border-radius: .5em;
 }
-
 .amiibo-catalog {
     position: relative;
     white-space: nowrap;
 }
-
 .amiibo-catalog img:nth-child(1) {
     left: 25%;
     width: 50%;
     display: block;
     margin: 0 auto;
 }
-
 .amiibo-catalog img:nth-child(2) {
     transform: rotate(12deg) translate(-25px, 30px);
     float: right;
     border: solid 1px #b9b9b9;
     border-radius: .5em;
 }
-
 .amiibo-catalog img:nth-child(3) {
     transform: rotate(-12deg) translate(25px, 30px);
 }
-
 .amiibo-catalog img:nth-child(4) {
     transform: translate(25px, -100px);
     margin: 0 auto;
     display: block;
 }
-
 .amiibo-catalog img:nth-child(5) {
     position: relative;
     margin: -290px 20px 0 auto;
     display: block;
 }
-
 @media only screen and (min-width: 40.063em) {
     .amiibo-catalog img:nth-child(1) {
         display: none;
     }
 }
-
 @media only screen and (min-width: 54.063em) {
     .amiibo-catalog {
         width: 50%;
         float: left;
     }
 }
-
 @media only screen and (min-width: 45em) and (max-width: 54.063em) {
     .amiibo-catalog img:nth-child(2) {
         transform: rotate(12deg) translate(200px, -10px);
@@ -3196,15 +3297,18 @@ body.lang-fr #timeline ul li article dl dd.released {
         top: 0;
         left: 0;
     }
+    
     .amiibo-catalog img:nth-child(3) {
         margin-bottom: 50px;
     }
+    
     .amiibo-catalog img:nth-child(4) {
         position: absolute;
         transform: translate(130px, 170px);
         top: 0;
         left: 0;
     }
+    
     .amiibo-catalog img:nth-child(5) {
         position: absolute;
         margin: 0;
@@ -3212,7 +3316,6 @@ body.lang-fr #timeline ul li article dl dd.released {
         top: 70px;
     }
 }
-
 @media only screen and (min-width: 60em) {
     .amiibo-catalog img:nth-child(2) {
         transform: rotate(12deg) translate(200px, -10px);
@@ -3220,12 +3323,14 @@ body.lang-fr #timeline ul li article dl dd.released {
         top: 0;
         left: 0;
     }
+    
     .amiibo-catalog img:nth-child(4) {
         position: absolute;
         transform: translate(130px, 170px);
         top: 0;
         left: 0;
     }
+    
     .amiibo-catalog img:nth-child(5) {
         position: absolute;
         margin: 0;
@@ -3233,7 +3338,3 @@ body.lang-fr #timeline ul li article dl dd.released {
         top: 70px;
     }
 }
-
-
-
-
