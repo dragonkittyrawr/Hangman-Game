@@ -1122,6 +1122,7 @@ h3 {
 
 h1 {
     font-size: 2.5rem;
+    z-index: 1000!important;
 }
 
 h2 {
@@ -2310,6 +2311,8 @@ body {
 }
 
 
+
+
 }
 @media only screen and (max-width: 30em) {
     #wrapper #featured .featured-content header.featured-titles {
@@ -3337,4 +3340,13 @@ body.lang-fr #timeline ul li article dl dd.released {
         right: 0;
         top: 70px;
     }
+}
+
+header {
+    margin-bottom: 55px;
+}
+
+#game {
+    margin-top: 25px!important;
+    margin-bottom: 25px!important;
 }
